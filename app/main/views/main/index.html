@@ -1,0 +1,9 @@
+<:Title>
+  Home
+
+<:Body>
+  <ul>
+  	{{all_participants.each do |b|}}
+  		<li> {{b.user.then { |c| c.name } }} - {{b.presence}} </li>
+  	{{ end }}
+  </ul>
